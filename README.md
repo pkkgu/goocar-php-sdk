@@ -11,7 +11,7 @@ API平台文档：http://www.goocar.net/open/v1.0/dataApi.html
 
 ----------
 
-## 1. goocar.class.php 官方API类库
+## goocar.class.php 官方API类库
 
 ### 主要功能 
 - getAccessToken 获取AccessToken POST
@@ -33,9 +33,9 @@ API平台文档：http://www.goocar.net/open/v1.0/dataApi.html
 	);
  $weObj = new Goocar($options); //创建实例对象
  //TODO：调用$weObj各实例方法
-
+```php
 ----------
-
 ## author
 author  pkkgu <910111100@qq.com>
 link https://github.com/pkkgu/
+
