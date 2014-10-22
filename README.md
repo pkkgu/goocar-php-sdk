@@ -34,3 +34,8 @@ API平台文档：http://www.goocar.net/open/v1.0/dataApi.html
  $weObj = new Goocar($options); //创建实例对象
  //TODO：调用$weObj各实例方法
 
+----------
+
+## author
+author  pkkgu <910111100@qq.com>
+link https://github.com/pkkgu/
