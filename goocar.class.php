@@ -5,19 +5,22 @@
  *  @link https://github.com/pkkgu/goocar-php-sdk
  *  @version 1.0
  *  usage:
- *   $options = array(
- *			'account'=>'test', //经销商的账号
- *			'password'=>'test123', //经销商的密码
- *			'access_token'=>'access_token', //accesstoken
- *			'map_type'=>'BAIDU' //GOOGLE,BAIDU两种坐标
- *		);
- *	 $weObj = new Goocar($options);
-
- *	 print_r($weObj->Monitor());
- *	 print_r($weObj->Tracking("862304020925973"));
- *	 print_r($weObj->History("862304020925973",time()-72000,time(),4));
- *	 print_r($weObj->Address("114.4217221","23.07168206"));
-
+		$options = array(
+				'account'=>'test', //经销商的账号
+				'password'=>'test123', //经销商的密码
+				'access_token'=>'', //accesstoken
+				'map_type'=>'BAIDU' //GOOGLE,BAIDU两种坐标
+			);
+		$weObj = new Goocar($options);
+		$Monitor = $weObj->Monitor();
+		$TIME    = time();
+		$IMEI    = $Monitor['data'][0]['imei'];
+		$lng     = $Monitor['data'][0]['lng'];
+		$lat     = $Monitor['data'][0]['lat'];
+		print_r($Monitor);
+		print_r($weObj->Tracking($IMEI));
+		print_r($weObj->History($IMEI,$TIME-72000,$TIME,4));
+		print_r($weObj->Address($lng,$lat));
  */
 class Goocar
 {
