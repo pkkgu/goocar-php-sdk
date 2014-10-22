@@ -52,12 +52,12 @@ class Goocar
 	}
 
 	/**
-	 * 获取Access Token POST
+	 * 获取AccessToken POST
 	 * @param string $account
 	 * @param string $password
 	 * @param string $access_token 手动指定access_token，非必要情况不建议用
 	 */
-	public function getOauthAccessToken($account='',$password='',$access_token=''){
+	public function getAccessToken($account='',$password='',$access_token=''){
 		if (!$account || !$password) {
 			$account = $this->account;
 			$password = $this->password;
@@ -90,7 +90,7 @@ class Goocar
 	 * @return boolean|array
 	 */
 	public function Monitor(){
-		if (!$this->access_token && !$this->getOauthAccessToken()) return false;
+		if (!$this->access_token && !$this->getAccessToken()) return false;
 		$data = array(
 				'access_token'=>$this->access_token,
 				'time'=>$this->time,
@@ -118,7 +118,7 @@ class Goocar
 	 * @return boolean|array
 	 */
 	public function Tracking($imeis){
-		if (!$this->access_token && !$this->getOauthAccessToken()) return false;
+		if (!$this->access_token && !$this->getAccessToken()) return false;
 		if (!$imeis) return false;
 		$data = array(
 				'access_token'=>$this->access_token,
@@ -150,7 +150,7 @@ class Goocar
 	 * @return boolean|array
 	 */
 	public function History($imei,$begin_time,$end_time,$limit=100){
-		if (!$this->access_token && !$this->getOauthAccessToken()) return false;
+		if (!$this->access_token && !$this->getAccessToken()) return false;
 		if (!$imei || !$begin_time || !$end_time) return false;
 		$data = array(
 				'access_token'=>$this->access_token,
@@ -185,7 +185,7 @@ class Goocar
 	 * @return boolean|array
 	 */
 	public function Address($lng,$lat){
-		if (!$this->access_token && !$this->getOauthAccessToken()) return false;
+		if (!$this->access_token && !$this->getAccessToken()) return false;
 		if (!$lng || !$lat) return false;
 		$data = array(
 				'access_token'=>$this->access_token,

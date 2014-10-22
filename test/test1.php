@@ -1,6 +1,9 @@
 <?php
 /**
- * 汽车在线接口测试
+/**
+ *	汽车在线PHP-SDK 工具类API 测试
+ *  @author  pkkgu <910111100@qq.com>
+ *  @link https://github.com/pkkgu/goocar-php-sdk
  * 
  */
 include("../goocar.class.php");
@@ -16,7 +19,8 @@ $options = array(
 		'map_type'=>'BAIDU' //GOOGLE,BAIDU两种坐标
 	);
 $weObj = new Goocar($options);
-	
+
+
 echo "<pre>";
 $Monitor = $weObj->Monitor();
 $TIME    = time();
@@ -30,5 +34,3 @@ print_r($weObj->Tracking($IMEI));
 print_r($weObj->History($IMEI,$TIME-72000,$TIME,4));
 
 print_r($weObj->Address($lng,$lat));
-
-
