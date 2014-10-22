@@ -6,8 +6,6 @@ goocar-php-sdk
 项目地址：**https://github.com/pkkgu/goocar-php-sdk**   
 项目作者：pkkgu <910111100@qq.com>
 
-
-## 使用详解
 需要有汽车在线开放平台账号并且申请了APPKEY：  
 API平台文档：http://www.goocar.net/open/v1.0/dataApi.html
 
