@@ -2,7 +2,7 @@ goocar-php-sdk
 ==============
 
 汽车在线开放平台php开发包
-weixin developer SDK.
+
 项目地址：**https://github.com/pkkgu/goocar-php-sdk**   
 
 ## 使用详解
